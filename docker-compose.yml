@@ -1,0 +1,12 @@
+version: "3"
+services:
+  clickhouse-server:
+    image: yandex/clickhouse-server:1.1.54236
+    volumes:
+      - ./clickhouse-server/config.xml:/etc/clickhouse-server/config.d/config.xml
+      - clickdata:/var/lib/clickhouse
+    ports:
+      - "127.0.0.1:8123:8123"
+      - "127.0.0.1:9000:9000"
+volumes:
+  clickdata:
