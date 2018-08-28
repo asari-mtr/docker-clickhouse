@@ -1,0 +1,3 @@
+<config>
+  <host>clickhouse-server</host>
+</config>
